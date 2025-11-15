@@ -92,7 +92,7 @@ def main_function(tablica_rownan):
 
 
 tablica_rownan = []
-N = int(input("N: "))
+N = int(input(""))
 for _ in range(N):
     napis = input("")
     tablica_rownan.append(re.split(r"[+=]", napis))
