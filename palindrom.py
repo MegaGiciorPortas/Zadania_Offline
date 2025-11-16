@@ -98,5 +98,6 @@ def main_function(T):
 N = int(input(""))
 T = []
 for _ in range(N):
-    T.append("")
+    napis = input("")
+    T.append(list(napis))
 print(main_function(T))
