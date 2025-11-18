@@ -10,7 +10,8 @@ def is_prime(n):
 
 
 def differentDigits(n):
-    return len(list(n)) == len(set(n))
+    if len(n) > 10: return False
+    return len(n) == len(set(n))
 
 
 def find(N, indeks = 0):
