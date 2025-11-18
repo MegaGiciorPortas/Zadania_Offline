@@ -37,7 +37,7 @@ def main_function(N):
     minGlobal = float('inf')
     indeks = 0
 
-    for size in range(1, len(N) - 1):
+    for size in range(1, len(N)):
         digit = N[indeks:indeks + size]
 
         if differentDigits(digit) and is_prime(int(digit)):
@@ -53,5 +53,5 @@ def main_function(N):
     return minGlobal
 
 
-N = input("")
+N = input("").strip()
 print(main_function(N))
