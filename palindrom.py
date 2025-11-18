@@ -74,9 +74,6 @@ def main_function(T):
             palindromy.setdefault(ciag, 0)
             palindromy[ciag] += 1
 
-            if palindromy[ciag] == 2:
-                return ciag
-
         n = len(ciag)
         for dlugosc in range(n - 1, 4, -1):
             indeks = 0
@@ -87,10 +84,17 @@ def main_function(T):
                     palindromy.setdefault(podciag, 0)
                     palindromy[podciag] += 1
 
-                    if palindromy[podciag] == 2:
-                        return podciag
-
                 indeks += 1
+
+    for key, value in palindromy.items():
+        if value == 2:
+            flaga = True
+            for klucze in palindromy:
+                if key == klucze:   continue
+                if key in klucze:
+                    flaga = False
+                    break
+            if flaga:   return key
 
     return None
 
