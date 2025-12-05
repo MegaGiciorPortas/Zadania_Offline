@@ -135,4 +135,7 @@ for line in sys.stdin:
     coordinates = list(map(int,line.strip().split(" ")))
     land[coordinates[0]][coordinates[1]] = coordinates[2]
 
+
+
+
 main_function(land)
